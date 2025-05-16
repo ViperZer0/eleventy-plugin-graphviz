@@ -14,6 +14,7 @@ export interface PluginOptions
     // - plain
     // - dot_json
     format: Format,
+    // Currently not used, this may change in the future.
     layout: null,
 }
 

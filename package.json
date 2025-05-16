@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/ViperZer0/eleventy-plugin-graphviz.git"
   },
   "license": "GPL-3.0-or-later",
-  "author": "ViperZer0",
+  "author": "Weedleeedle <weedleeedle@gmail.com>",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
