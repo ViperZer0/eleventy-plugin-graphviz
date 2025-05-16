@@ -12,13 +12,12 @@
   },
   "license": "GPL-3.0-or-later",
   "author": "ViperZer0",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "test": "jest"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.15.18",
@@ -28,6 +27,8 @@
     "dist"
   ],
   "dependencies": {
+    "@ts-graphviz/adapter": "^2.0.6",
+    "11ty.ts": "^0.0.5",
     "ts-graphviz": "^2.1.6"
   }
 }
