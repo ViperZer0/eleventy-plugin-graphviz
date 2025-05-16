@@ -16,7 +16,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build", "tsc",
+    "build": "tsc",
     "prepublishOnly": "npm run build",
     "test": "jest"
   },
@@ -25,6 +25,9 @@
     "typescript": "^5.8.3"
   },
   "files": [
-      "dist"
-  ]
+    "dist"
+  ],
+  "dependencies": {
+    "ts-graphviz": "^2.1.6"
+  }
 }
