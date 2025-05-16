@@ -1,0 +1,30 @@
+{
+  "name": "eleventy-plugin-graphviz",
+  "version": "1.0.0",
+  "description": "An eleventy plugin to parse inline DOT syntax and generate GraphViz graphs from it.",
+  "homepage": "https://github.com/ViperZer0/eleventy-plugin-graphviz#readme",
+  "bugs": {
+    "url": "https://github.com/ViperZer0/eleventy-plugin-graphviz/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ViperZer0/eleventy-plugin-graphviz.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "ViperZer0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build", "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3"
+  },
+  "files": [
+      "dist"
+  ]
+}
