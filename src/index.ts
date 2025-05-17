@@ -40,12 +40,13 @@ export default function graphVizPlugin(eleventyConfig: EleventyConfig, pluginOpt
 
     // Add .gv and .dot files to be processed.
     eleventyConfig.addExtension(["gv", "dot"], {
-        compile: async (inputContent: string) => {
-            let outputStream = renderGraphVizScript(inputContent, _pluginOptions.format);
-            // Returns a closure for some reason? Idk I'm just following the instructions
-            return async () => {
-                return (await outputStream).read()
-            };
+        compile: async function (inputContent: string) {
+            console.log("InputContent: ", inputContent);
+            let result = await renderGraphVizScript(inputContent, _pluginOptions.format);
+            return async (data: object) => {
+                return result.read() as Buffer
+            }
+
         },
         outputFileExtension: _pluginOptions.format,
         getData: () => {
@@ -64,5 +65,5 @@ export default function graphVizPlugin(eleventyConfig: EleventyConfig, pluginOpt
 async function renderGraphVizScript(dotScript: string, format: Format): Promise<NodeJS.ReadableStream>
 {
     let options: Options = { format: format };
-    return toStream(dotScript, options);
+    return await toStream(dotScript, options);
 }
